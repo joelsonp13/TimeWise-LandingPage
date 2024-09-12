@@ -1,0 +1,252 @@
+<!DOCTYPE html> <!-- Define o documento como HTML5 -->
+<html lang="en"> <!-- Inicia o documento HTML e define o idioma como inglês -->
+
+<head>
+    <!-- Metadados do documento -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a visualização responsiva -->
+    <title>Menu com Tailwind CSS</title> <!-- Título da página -->
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Importa o Tailwind CSS -->
+</head>
+
+<body class="bg-gray-100"> <!-- Define o fundo da página com uma cor cinza clara -->
+    <div class="bg-black text-white font-sans"> <!-- Contêiner principal com fundo preto e texto branco -->
+
+        <!-- Navbar (barra de navegação) -->
+        <div class="container mx-auto px-4 py-8 flex justify-between items-center">
+            <div>
+                <img class="w-24 h-auto" src="logo.png" alt="Logo"> <!-- Logo da empresa -->
+            </div>
+
+            <!-- Links de navegação visíveis apenas em telas médias para cima -->
+            <div class="hidden md:flex space-x-8">
+                <a class="hover:underline" href="#">Início</a> <!-- Link para a página inicial -->
+                <a class="hover:underline" href="#">Sobre</a> <!-- Link para a seção Sobre -->
+                <a class="hover:underline" href="#">Serviços</a> <!-- Link para a seção Serviços -->
+                <a class="hover:underline" href="#">Contato</a> <!-- Link para a seção Contato -->
+            </div>
+
+            <!-- Botão do menu responsivo, visível apenas em telas menores que médias -->
+            <div class="md:hidden">
+                <button class="focus:outline-none" id="menuButton">
+                    <!-- Ícone de menu hamburguer -->
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path> <!-- Linhas do ícone de menu -->
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu responsivo para dispositivos móveis -->
+        <div class="md:hidden px-4 pb-4 hidden" id="mobileMenu">
+            <a class="block py-2 hover:underline" href="#">Início</a> <!-- Link para a página inicial -->
+            <a class="block py-2 hover:underline" href="#">Sobre</a> <!-- Link para a seção Sobre -->
+            <a class="block py-2 hover:underline" href="#">Serviços</a> <!-- Link para a seção Serviços -->
+            <a class="block py-2 hover:underline" href="#">Contato</a> <!-- Link para a seção Contato -->
+        </div>
+
+        <!-- Seção com logotipos e botões -->
+        <div class="flex flex-wrap justify-center gap-4">
+            <div class="flex flex-col items-center w-full max-w-sm md:max-w-md lg:max-w-lg">
+                <img class="w-max h-auto mb-6" src="imagens/logo_timewise.png" alt="Logo Timewise">
+                <!-- Imagem do logotipo Timewise -->
+                <div class="mt-6">
+                    <!-- Botão para baixar o aplicativo -->
+                    <button class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded">
+                        BAIXAR APLICATIVO
+                    </button>
+                </div>
+                <img class="w-max h-max mt-6" src="icones/icones.png" alt="Ícones"> <!-- Imagem de ícones -->
+            </div>
+            <img class="w-full h-max max-w-prose md:max-w-md lg:max-w-lg" src="imagens/mulher_de_chachos.png"
+                alt="Mulher de Cachos"> <!-- Imagem decorativa de uma mulher com cachos -->
+        </div>
+
+        <!-- Linha amarela de destaque -->
+        <div class="bg-yellow-400 h-1"></div>
+
+        <!-- Seção Sobre Nós -->
+        <div class="container mx-auto px-4 py-20 bg-black text-right">
+            <h1 class="text-4xl md:text-5xl font-bold text-yellow-400">SOBRE NÓS</h1> <!-- Título da seção -->
+            <p class="px-4 py-6 max-w-lg ml-auto">
+                Bem-vindo ao TIMEWISE, onde simplificamos o agendamento de compromissos de maneira intuitiva e
+                eficiente.
+            </p> <!-- Parágrafo de introdução sobre o Timewise -->
+            <p class="max-w-lg ml-auto">
+                Somos estudantes do Senac Minas em Análise e Desenvolvimento de Sistemas, apaixonados por tecnologia e
+                comprometidos em criar soluções que facilitam seu dia a dia. Nosso objetivo é proporcionar uma
+                experiência fluida e sem complicações, permitindo que você agende compromissos de forma simples e rápida
+                diretamente pela web.
+            </p> <!-- Parágrafo explicando o propósito e a equipe por trás do Timewise -->
+        </div>
+
+        <!-- Linha amarela de destaque -->
+        <div class="bg-yellow-400 h-1"></div>
+
+        <!-- Seção de Destaque -->
+        <div class="flex items-center justify-center py-10 px-4">
+            <div class="flex flex-col lg:flex-row items-center justify-center w-full max-w-6xl">
+                <div class="w-full h-auto max-w-sm md:max-w-md lg:max-w-lg flex justify-center mb-6 lg:mb-0">
+                    <img src="imagens/fotoapp.png" alt="Mobile app screenshot" class="rounded-lg w-full h-auto">
+                    <!-- Imagem do aplicativo móvel -->
+                </div>
+                <div class="w-full lg:w-1/2 p-4 text-center lg:text-left flex flex-col items-center lg:items-start">
+                    <h1 class="text-2xl lg:text-4xl font-bold text-yellow-400 leading-tight mb-4">
+                        CANSADO DE PERDER HORAS TENTANDO ORGANIZAR SEU TEMPO?
+                    </h1> <!-- Título chamativo -->
+                    <p class="text-white mb-4">
+                        CONHEÇA NOSSA PLATAFORMA INOVADORA, TIME WISE AGENDAMENTOS, A SOLUÇÃO DEFINITIVA PARA
+                        TRANSFORMAR A FORMA COMO VOCÊ GERENCIA SEUS COMPROMISSOS, AGORA COM MAIS SABEDORIA.
+                    </p> <!-- Descrição da plataforma -->
+                    <h2 class="text-2xl lg:text-4xl font-bold text-yellow-400 leading-tight mb-4">
+                        NOSSO APLICATIVO
+                    </h2> <!-- Subtítulo explicando o aplicativo -->
+                    <p class="text-white">
+                        DESENVOLVIDO PARA VOCÊ, EMPRESÁRIO! SEJA PESSOA FÍSICA OU JURÍDICA, NOSSO APP OFERECE TUDO PARA
+                        GERENCIAR SEU NEGÓCIO EFICIENTEMENTE.
+                    </p> <!-- Explicação sobre o público-alvo do aplicativo -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Linha amarela de destaque -->
+        <div class="bg-yellow-400 h-1"></div>
+
+        <!-- Outra Seção de Destaque -->
+        <div class="flex items-center justify-center  py-10 px-4">
+            <div class="flex flex-col lg:flex-row items-center justify-center w-full max-w-6xl">
+                <div class="w-full h-auto max-w-sm md:max-w-md lg:max-w-lg flex justify-center mb-6 lg:mb-0">
+                    <img src="imagens/varios_celulares.png" alt="Mobile app screenshot"
+                        class="rounded-lg w-full h-auto mx-auto"> <!-- Imagem de múltiplos dispositivos móveis -->
+                </div>
+                <div class="w-full lg:w-1/2 p-4 text-center lg:text-left flex justify-center lg:justify-start">
+                    <div>
+                        <h1 class="text-2xl lg:text-4xl font-bold text-yellow-400 leading-tight mb-4">
+                            CANSADO DE PERDER HORAS TENTANDO ORGANIZAR SEU TEMPO?
+                        </h1> <!-- Título chamativo -->
+                        <p class="text-white mb-4">
+                            CONHEÇA NOSSA PLATAFORMA INOVADORA, TIME WISE AGENDAMENTOS, A SOLUÇÃO DEFINITIVA PARA
+                            TRANSFORMAR A FORMA COMO VOCÊ GERENCIA SEUS COMPROMISSOS, AGORA COM MAIS SABEDORIA.
+                        </p> <!-- Descrição da plataforma -->
+                        <h2 class="text-2xl lg:text-4xl font-bold text-yellow-400 leading-tight mb-4">
+                            NOSSO APLICATIVO
+                        </h2> <!-- Subtítulo explicando o aplicativo -->
+                        <p class="text-white">
+                            DESENVOLVIDO PARA VOCÊ, EMPRESÁRIO! SEJA PESSOA FÍSICA OU JURÍDICA, NOSSO APP OFERECE TUDO
+                            PARA GERENCIAR SEU NEGÓCIO EFICIENTEMENTE.
+                        </p> <!-- Explicação sobre o público-alvo do aplicativo -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Linha amarela de destaque -->
+    <div class="bg-yellow-400 h-1" ></div>
+
+    <!-- Seção de Benefícios -->
+    <div class="flex flex-wrap justify-center items-center bg-black py-16 px-4">
+        <!-- Benefícios para a empresa -->
+        <div
+            class="bg-black border-2 border-yellow-400 rounded-lg p-8 text-white m-4 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-full md:h-64 lg:h-80">
+            <h2 class="text-xl md:text-2xl font-bold mb-4">PARA EMPRESA</h2>
+            <ul class="list-disc ml-4 mt-4 space-y-2">
+                <li>MAIOR EFICIÊNCIA E PRODUTIVIDADE;</li>
+                <li>ORGANIZAÇÃO INTERNA MELHORADA;</li>
+                <li>APRIMORAMENTO DA QUALIDADE DO ATENDIMENTO;</li>
+                <li>REDUÇÃO DE CUSTOS OPERACIONAIS.</li>
+            </ul>
+        </div>
+
+        <!-- Benefícios para o cliente -->
+        <div
+            class="bg-black border-2 border-yellow-400 rounded-lg p-8 text-white m-4 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-full md:h-64 lg:h-80">
+            <h2 class="text-xl md:text-2xl font-bold mb-4">PARA CLIENTE</h2>
+            <ul class="list-disc ml-4 mt-4 space-y-2">
+                <li>MAIOR CONVENIÊNCIA NO AGENDAMENTO;</li>
+                <li>MELHOR EXPERIÊNCIA DO USUÁRIO;</li>
+                <li>FEEDBACK DIRETO E AVALIAÇÕES DE SERVIÇOS.</li>
+            </ul>
+        </div>
+
+        <!-- Chamada para baixar o aplicativo -->
+        <div
+            class="bg-black rounded-lg p-8 text-white m-4 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-full md:h-64 lg:h-80">
+            <h2 class="text-xl md:text-2xl font-bold mb-4">NÃO PERCA TEMPO!</h2>
+            <p class="mt-4 mb-6">BAIXE NOSSO APLICATIVO AGORA MESMO E TRANSFORME SUA EXPERIÊNCIA COM SERVIÇOS DE BELEZA.
+                ACESSE UMA NOVA ERA DE CONVENIÊNCIA E EFICIÊNCIA, TANTO PARA SUA EMPRESA QUANTO PARA SEUS CLIENTES.</p>
+            <button class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full">
+                Baixar Agora
+            </button>
+        </div>
+    </div>
+
+    <!-- Script para alternar o menu mobile -->
+    <script>
+        // Seleciona o botão de menu e o menu mobile
+        const menuButton = document.getElementById('menuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        // Adiciona um evento de clique para alternar a visibilidade do menu mobile
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+<footer class="bg-black text-yellow-400">
+    <div>
+        <h1 class="py-10 px-4 text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8">
+            TIMEWISE: O MELHOR APP PARA GESTÃO DE AGENDAMENTOS!
+        </h1>
+        <!-- Linha amarela de destaque -->
+        <div class="bg-yellow-400 h-1 flex "></div>
+        <div class="flex justify-center">
+            <div class="flex flex-row w-full max-w-[800px] object-cover h-auto justify-center">
+                <img src="imagens/jovem-na-barbearia-aparando-cabelo.jpg" alt="barber screenshot" class="w-max object-cover border-r-4 border-yellow-400">
+           
+                
+                <img src="imagens/homen_fazendo_barba.png" alt="barber screenshot" class="w-max object-cover">
+            </div>
+        </div>
+
+        <!-- Linha amarela de destaque -->
+        <div class="bg-yellow-400 h-1"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-black container mx-auto py-10 px-4">
+            <!-- Contatos -->
+            <div class="p-6 rounded-lg bg-yellow-400 flex flex-col">
+                <h2 class="text-xl sm:text-2xl font-bold mb-4">CONTATOS</h2>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><a href="tel:+5535997109435" class="hover:underline">(35) 99710-9435</a></li>
+                    <li><a href="https://www.instagram.com/timewisegendamentos/"
+                            class="hover:underline">@TIMEWISEGENDAMENTOS</a></li>
+                    <li><a href="https://www.facebook.com/timewisegendamentos/"
+                            class="hover:underline">TIMEWISEGENDAMENTOS</a></li>
+                </ul>
+            </div>
+
+            <!-- Formas de Pagamento -->
+            <div class="p-6 rounded-lg bg-yellow-400 flex flex-col">
+                <h2 class="text-xl sm:text-2xl font-bold mb-4">FORMAS DE PAGAMENTO</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="flex items-center space-x-2">
+                        <img src="icones/icons8-visa-50.png" alt="Visa" class="w-12 h-12 sm:w-16 sm:h-16">
+                        <p class="text-lg sm:text-xl">Visa</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <img src="icones/icons8-mastercard-50.png" alt="MasterCard" class="w-12 h-12 sm:w-16 sm:h-16">
+                        <p class="text-lg sm:text-xl">MasterCard</p>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <img src="icones/icons8-whatsapp-50.png" alt="WhatsApp" class="w-12 h-12 sm:w-16 sm:h-16">
+                        <p class="text-lg sm:text-xl">WhatsApp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>
